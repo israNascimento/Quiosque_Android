@@ -1,0 +1,139 @@
+<body>
+		<div id="barra_governo2"></div>
+	<div id="estrutura">
+		<div id="fundo">
+			<div id="menu">
+				<ul id="lista_menu">
+						<li><a class="menu_ativo" href="quiosque.php?pag=inicio">Início</a></li>
+						<li><a href="quiosque.php?pag=cadastro">Cadastro</a></li>
+						<li><a href="quiosque.php?pag=historico">Histórico</a></li>
+						<li><a href="quiosque.php?pag=formularios">Formulários</a></li>
+						<li><a href="quiosque.php?pag=informativos" style="color:#A9FC94;font-weight:bold;">Informativos</a></li>
+						<li><a href="quiosque.php?pag=horario" style="color:#FFFF66;font-weight:bold">Horários</a></li>
+						<li><a href="quiosque.php?pag=notas">Notas</a></li>
+						<li><a href="quiosque.php?pag=arquivos">Arquivos</a></li>
+						<li><a href="quiosque.php?pag=levantamentoacademico">Curso</a></li>
+						<li><a href="quiosque.php?pag=calendario">Calendário</a></li>
+						<li><a href="quiosque.php?pag=impressao" style="color:#C30;font-weight:bold">Impressão</a></li>
+						<li><a href="quiosque.php?pag=opcoes">Opções</a></li>
+						<li><a href="quiosque.php?pag=ajudaquiosque">Ajuda</a></li>
+						<li><a href="quiosque.php?sair">Sair</a></li>
+				</ul>
+				<div id="bloco_menu">&nbsp;</div>
+			</div>
+			<div id="banner"></div>
+			<div id="conteudo">
+<h1>Bem vindo</h1>
+
+<div class="inicio_fundo">
+
+<div class="inicio_msg">
+
+	<p>Olá Israel.<br>Seja bem vindo ao seu Quiosque.</p>
+
+	<p>Esperamos que você goste do nosso visual e, principalmente, dos recursos. Não perca tempo e navegue já no seu menu de opções.</p>
+
+	<p>&nbsp;</p>
+
+	<div id="info_us">
+		201639027-1<br>
+		ISRAEL DE SANT ANNA NASCIMENTO<br>
+		SISTEMAS DE INFORMAÇÃO	</div>
+
+</div>
+    
+    <div style="border-color:#770000; border-width: 2pt; text-align: center; font-size: 9pt; border-style: solid; height: 15px">
+        <a style="font-weight: bold; color: #770000" href="http://r1.ufrrj.br/graduacao/arquivos/docs_academico/delib_128_alt.pdf" target="_brank">
+            - [Verificação de Rendimento Escolar - Deliberação CEPE 128/1982 (Alterada)] -
+        </a>
+    </div>
+
+
+
+<div class="bloco_noticias_dest">
+	<p class="tit_noticias_dest">Destaques</p>
+<p class="item_noticias_dest">
+<a href="http://academico.ufrrj.br/quiosque/aluno/arquivos/destaques/FECHADO.jpg" rel="lightbox[qsqdestaque]" id="primeiro_destaque" title="Setores da Prograd estarão fechados nos dias de matrícula dos ingressantes em 2017-2">Setores da Prograd estarão fechados nos dias de matrícula dos ingressantes em 2017-2</a>
+</p>
+
+<p class="item_noticias_dest">
+<a href="http://academico.ufrrj.br/quiosque/aluno/arquivos/destaques/Tranc.jpg" rel="lightbox[qsqdestaque]" title="CALENDÁRIO ACADÊMICO: Prazo Final para realizar o trancamento de matrícula em 2017-1">CALENDÁRIO ACADÊMICO: Prazo Final para realizar o trancamento de matrícula em 2017-1</a>
+</p>
+
+<p class="item_noticias_dest">
+<a href="http://academico.ufrrj.br/quiosque/aluno/arquivos/destaques/Prorr.jpg" rel="lightbox[qsqdestaque]" title="CALENDÁRIO ACADÊMICO: Prazo Final para solicitação de Prorrogação do Tempo de Conclusão do Curso">CALENDÁRIO ACADÊMICO: Prazo Final para solicitação de Prorrogação do Tempo de Conclusão do Curso</a>
+</p>
+
+<p class="item_noticias_dest">
+<a href="http://academico.ufrrj.br/quiosque/aluno/arquivos/destaques/Capturar.jpg" rel="lightbox[qsqdestaque]" title="Prograd receberá documentação pendente dos estudantes até o dia 30 de junho">Prograd receberá documentação pendente dos estudantes até o dia 30 de junho</a>
+</p>
+
+<p class="item_noticias_dest">
+<a href="http://academico.ufrrj.br/quiosque/aluno/arquivos/destaques/mensurar-junior.jpg" rel="lightbox[qsqdestaque]" title="PROCESSO SELETIVO MENSURAR JÚNIOR">PROCESSO SELETIVO MENSURAR JÚNIOR</a>
+</p>
+
+</div>
+
+
+<div class="bloco_noticias_dest">
+	<p class="tit_noticias_dest">Oportunidades de Estágio</p>
+	<p class="item_noticias_dest_nenhum">Nenhuma oportunidade de estágio cadastrada no Quiosque no momento.</p>
+</div>
+
+<div class="bloco_noticias">
+	<p class="tit_noticias">Novidades</p>
+		<p class="item_noticias_cal"><a href="quiosque.php?pag=calendario">Está disponível 1 novo item no CALENDÁRIO.</a></p>
+</div>
+
+<div class="bloco_noticias_link">
+	<p class="tit_noticias_link">Links Importantes</p>
+
+	<p class="item_noticias_link"><a href="http://r1.ufrrj.br/graduacao/" target="_blank">Site da PROGRAD</a></p>
+
+	<p class="item_noticias_link"><a href="http://r1.ufrrj.br/wp/sinteeg/" target="_blank">Site da Divisão de Estágios</a></p>
+
+	<p class="item_noticias_link"><a href="http://www.blogdagraduacao.blogspot.com/" target="_blank">Blog da Pró-reitoria de Graduação</a></p>
+
+	<p class="item_noticias_link"><a href="http://seropedicalimpa.blogspot.com/" target="_blank">Blog Seropédica Limpa</a></p>
+
+	<p class="item_noticias_link"><a href="http://www.periodicos.capes.gov.br/portugues/index.jsp" target="_blank">Periódicos CAPES - O Portal Brasileiro da Informação Científica</a></p>
+
+	<p class="item_noticias_link"><a href="https://servicos.ufrrj.br/uab/" target="_blank">Plataforma Moodle</a></p>
+
+	<p class="item_noticias_link"><a href="http://www.ufrrj.br/graduacao/paginas/home.php?id=Calendarios" target="_blank">Calendário de Matrícula</a></p>
+
+
+	<p class="item_noticias_link"><a href="quiosque.php?pag=formularios" title="Clique aqui">Formulário de Trancamento de Matrícula</a></p>
+
+
+	<p class="item_noticias_link"><a href="#" onclick="javascript:abrir_janela('http://www.ufrrj.br/graduacao/ouvidoria/ouvidoria.php', 760, 570, true);" title="">Ouvidoria da PROGRAD - Dúvidas, elogios ou críticas</a></p>
+
+	<p class="item_noticias_link"><a href="quiosque.php?pag=senha" title="Clique aqui">Aumente sua segurança criando uma senha personalizada para acesso ao Quiosque</a></p>
+
+
+	<p class="item_noticias_link"><a href="quiosque.php?pag=sugestoes" title="Clique aqui">Gostaria de fazer uma sugestão para melhorar o Quiosque?</a></p>
+
+
+</div>
+
+</div>
+
+<div id="info_sis">
+	<span id="txt_versao">Versão: 3.62</span>
+	<span id="txt_acessos">21813731 acessos desde 10/Set/2007</span>
+</div>
+
+
+	<script type="text/javascript">
+		if (document.getElementById('primeiro_destaque')) { window.addEvent('domready', function() {$('primeiro_destaque').fireEvent('click');}); }	</script>
+			</div>
+			<div id="rodape">
+					<span id="estat_proc">Processado em: 0.20 seg(s) com 23 consulta(s).</span>
+					<span style="margin-left:90px">&nbsp;</span>
+					<!--<span class="getff"><a href="http://getfirefox.com" title="Visite GetFirefox.com" target="_blank"><img src="skins/cinza/getfirefox2kf.png" alt="" /></a></span>-->
+			</div>
+		</div>
+	</div>
+
+
+<div id="mbOverlay" style="visibility: hidden; zoom: 1; opacity: 0; width: 541px; height: 625px; display: none;"></div><div id="mbCenter" style="top: 199px; left: 683px; width: 451px; height: 378px; margin-top: -189px; margin-left: -225px; display: none;" class=""><div id="mbImage" style="visibility: visible; zoom: 1; opacity: 1; background-image: none; width: 431px; height: 328px;"></div><div id="mbBottom" style="visibility: visible; zoom: 1; opacity: 1;"><a id="mbCloseLink" href="#"></a><a id="mbNextLink" href="#"></a><a id="mbPrevLink" href="#"></a><div id="mbTitle">Setores da Prograd estarão fechados nos dias de matrícula dos ingressantes em 2017-2</div><div id="mbNumber">(1 de 5)</div><div id="mbCaption"></div></div></div></body>
