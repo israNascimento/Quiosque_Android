@@ -1,7 +1,9 @@
 package ufrrj.com.quiosque.web;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -16,6 +18,15 @@ import java.util.Scanner;
 
 public class LoginTask extends AsyncTask<String, Void, String> {
 
+    public interface asyncResponse {
+        void getResult(String output);
+    }
+
+    public asyncResponse delegate= null;
+
+    public LoginTask(asyncResponse response) {
+        this.delegate = response;
+    }
 
     @Override
     protected String doInBackground(String... params) {
@@ -58,11 +69,14 @@ public class LoginTask extends AsyncTask<String, Void, String> {
             Scanner scanner = new Scanner(connection.getInputStream());
             StringBuilder builder = new StringBuilder();
 
+
             while(scanner.hasNextLine()) {
                 builder.append(scanner.nextLine());
             }
             Log.d("Web", builder.toString());
             connection.disconnect();
+            Log.d("Kb", "Kb: "+builder.toString().getBytes().length);
+            Log.d("Web", "Kb: "+connection.getHeaderFields().toString());
             return builder.toString();
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,5 +88,6 @@ public class LoginTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
+        delegate.getResult(s);
     }
 }
