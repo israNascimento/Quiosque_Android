@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Matricula"
+        android:text="2016390271"
         android:maxLines="1" />
 
     <EditText

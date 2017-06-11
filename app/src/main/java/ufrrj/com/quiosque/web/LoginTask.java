@@ -33,7 +33,9 @@ public class LoginTask extends AsyncTask<String, Void, String> {
         String matricula = params[0];
         String senha = params[1];
 
-        try {
+        return "<div class=\"bloco_noticias\"><p     class=\"tit_noticias\">Novidades</p><p class=\"item_noticias_cal\"><a href=\"calendario\">Está disponível 1 novo item no CALENDÁRIO.</a></p><p class=\"item_noticias_arq\"><a href=\"arquivo\">Está disponível 1 novo ARQUIVO.</a></p><p class=\"item_noticias_not\"><a href=\"nota\">Está disponível 1 nova NOTA.</a></p></div>";
+
+        /*try {
             URL url = new URL("http://academico.ufrrj.br/quiosque/aluno/quiosque.php");
             Log.d("Web", "Conectando...");
             return Login(url, matricula, senha);
@@ -41,7 +43,7 @@ public class LoginTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
 
-        return null;
+        return null;*/
     }
 
 
@@ -50,7 +52,8 @@ public class LoginTask extends AsyncTask<String, Void, String> {
         try {
             connection = (HttpURLConnection) url.openConnection();
 
-            String conteudoPOST = "edtIdUs=2016390271&edtIdSen=15020876771&btnIdOk=+Ok+";
+            String conteudoPOST = "edtIdUs="+matricula+"" +
+                    "&edtIdSen="+senha+"&btnIdOk=+Ok+";
 
             connection.setRequestMethod("POST");
             connection.setDoOutput(true);
@@ -68,7 +71,6 @@ public class LoginTask extends AsyncTask<String, Void, String> {
 
             Scanner scanner = new Scanner(connection.getInputStream());
             StringBuilder builder = new StringBuilder();
-
 
             while(scanner.hasNextLine()) {
                 builder.append(scanner.nextLine());

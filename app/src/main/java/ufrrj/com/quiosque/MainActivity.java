@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button signin;
     private EditText matricula, password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         password = (EditText) findViewById(R.id.login_password);
         signin = (Button) findViewById(R.id.login_signin);
         signin.setOnClickListener(this);
+
+        /*AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        manager.getNextAlarmClock()*/
     }
-    private void Login(String matricula, String password) {
+
+    private void Login(final String matricula, final String password) {
         Log.d("Login", "Matricula: "+matricula+" Senha: "+password);
         new LoginTask(new LoginTask.asyncResponse() {
             @Override
@@ -38,17 +43,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 int index = result.indexOf("bloco_noticias");
                 if(index == -1) {
                     Log.d("Web", "Usuário ou senha inválido");
-                    Toast.makeText(context, "Verifique seus dados", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, "Matrícula ou senha inválidos", Toast.LENGTH_SHORT)
                             .show();
                     return;
                 }
-                Toast.makeText(context, "Feito", Toast.LENGTH_SHORT).show();
+/*                int infoStart = result.indexOf("info_us");
+                int infoEnd = result.indexOf("</div>", infoStart);
+                String infos = result.substring(infoStart, infoEnd);
+
+                int nameStart = infos.indexOf("/>");
+                int nameEnd = infos.indexOf("<br", nameStart);
+                String name = infos.substring(nameStart+4, nameEnd); //Retorna - />\t\t{NOME} Por isso +4
+                Toast.makeText(context, name, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, ConfigActivity.class);
+                intent.putExtra("nome", name);
+                intent.putExtra("matricula", matricula);
+                intent.putExtra("senha", password);
+                startActivity(intent);
+*/
 
                 AlarmManager manager = (AlarmManager) context.getSystemService(ALARM_SERVICE);
                 Intent i = new Intent(context, AlarmReceiver.class);
+                i.putExtra("matricula", matricula);
+                i.putExtra("senha", password);
                 PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, i, 0);
-                manager.setRepeating(AlarmManager.ELAPSED_REALTIME, 15000, 60*1000, pendingIntent);
-
+                manager.setRepeating(AlarmManager.ELAPSED_REALTIME, 60000, 60*1000, pendingIntent);
             }
         }).execute(matricula, password);
     }
