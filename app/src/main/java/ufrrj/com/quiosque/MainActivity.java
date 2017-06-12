@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i.putExtra("matricula", matricula);
                 i.putExtra("senha", password);
                 PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, i, 0);
-                manager.setRepeating(AlarmManager.ELAPSED_REALTIME, 60000, 60*1000, pendingIntent);
+                manager.setRepeating(AlarmManager.ELAPSED_REALTIME, 60000, 10*60*1000, pendingIntent);
             }
         }).execute(matricula, password);
     }

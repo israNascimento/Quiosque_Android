@@ -33,9 +33,10 @@ public class LoginTask extends AsyncTask<String, Void, String> {
         String matricula = params[0];
         String senha = params[1];
 
-        return "<div class=\"bloco_noticias\"><p     class=\"tit_noticias\">Novidades</p><p class=\"item_noticias_cal\"><a href=\"calendario\">Está disponível 1 novo item no CALENDÁRIO.</a></p><p class=\"item_noticias_arq\"><a href=\"arquivo\">Está disponível 1 novo ARQUIVO.</a></p><p class=\"item_noticias_not\"><a href=\"nota\">Está disponível 1 nova NOTA.</a></p></div>";
+        /**PARA TESTAR...**/
+        //return "<div class=\"bloco_noticias\"><p     class=\"tit_noticias\">Novidades</p><p class=\"item_noticias_cal\"><a href=\"calendario\">Está disponível 1 novo item no CALENDÁRIO.</a></p><p class=\"item_noticias_arq\"><a href=\"arquivo\">Está disponível 1 novo ARQUIVO.</a></p><p class=\"item_noticias_not\"><a href=\"nota\">Está disponível 1 nova NOTA.</a></p></div>";
 
-        /*try {
+        try {
             URL url = new URL("http://academico.ufrrj.br/quiosque/aluno/quiosque.php");
             Log.d("Web", "Conectando...");
             return Login(url, matricula, senha);
@@ -43,7 +44,7 @@ public class LoginTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
 
-        return null;*/
+        return null;
     }
 
 

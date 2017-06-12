@@ -7,8 +7,10 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.text.Html;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -34,6 +36,9 @@ public class AlarmReceiver extends BroadcastReceiver {
             @Override
             public void getResult(String result) { /* Para pegar o resultado da AsyncTask*/
                 Log.d("Resultado", ""+result);
+                if(result == null) {
+                    return;
+                }
                 int indexIni = result.indexOf("\"bloco_noticias\"");
                 if(indexIni == -1) {
                     Log.d("Web", "Usuário ou senha inválido");
@@ -49,6 +54,11 @@ public class AlarmReceiver extends BroadcastReceiver {
                         (Context.NOTIFICATION_SERVICE);
 
                 for (String s: novidades) {
+                    if (Build.VERSION.SDK_INT >= 24) {
+                        s = Html.fromHtml(s, Html.FROM_HTML_MODE_LEGACY).toString();
+                    } else {
+                        s = Html.fromHtml(s).toString();
+                    }
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                             .setSmallIcon(android.R.drawable.arrow_up_float)
                             .setContentTitle("Novidades do quiosque")
@@ -61,8 +71,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     }
 
     private List<String> getNovidades(String html){
-
-
         /****COMEÇA A TRATAR AS NOVIDADES INDIVIDUALMENTE****/
         int start;
         int end = 0;
